@@ -970,7 +970,7 @@ section.formcontato{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: ;
+    padding-left: 10px;
     gap: 16px;
 
     width: 1136px;
