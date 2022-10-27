@@ -13,7 +13,7 @@ body {
     line-height: 1;
 
     position: absolute;
-    width: 100%;
+    width: 98%;
 
     left: 30px;
     top: 0px;
@@ -285,6 +285,7 @@ section.about{
     width: 182px;
     height: 177px;
     background: url(.jpg);
+    display: none;
     /* Inside auto layout */
 }
 
@@ -435,16 +436,15 @@ section.academic{
 
 .academic__courses__item__img{
 /* Auto layout */
+    border-radius: 5%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
     gap: 10px;
 
-    width: 300px;
-    height: 286px;
-
+    width: 250px;
     background: #FFFFFF;
 
         /* Inside auto layout */
@@ -463,6 +463,7 @@ section.academic{
     font-weight: 700;
     font-size: 22px;
     line-height: 26px;
+    padding-top: 10px;
     /* identical to box height */
     color: #464646;
         /* Inside auto layout */
@@ -473,13 +474,12 @@ section.academic{
 }
 .academic__courses__item__subtitle{
     width: 290px;
-    height: 19px;
-
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
+    padding-bottom: 10px;
     /* identical to box height */
 
     color: #464646;
@@ -924,8 +924,8 @@ section.formcontato{
 }
 .formcontato__textarea{
     /* Caixa */
-    width: 656px;
-    height: 133px;
+    width: 675px;
+    height: 140px;
 
     /* Preto/branco */
 
@@ -971,6 +971,8 @@ section.formcontato{
     height: 55px;
     width: 150px;
 }
+
+
   
 /***************************************************************/
 /*footeer*/
@@ -984,7 +986,7 @@ section.footer{
     align-items: center;
     padding: 32px;
     gap: 10px;
-    width: 95%;
+    width: 100%;
     height: 20px;
 
     /* Preto/branco */
@@ -1122,13 +1124,16 @@ section.footer{
       }
      
     /*Formación Académica*/
+    section.academic {
+        padding: 20px 0 10px 15px ;
+    }
     .academic__title {
         font-size: 30px;
         line-height: 61px;  
       }
 
       .academic__courses{   
-        padding: 0 0 30px 15px;
+        padding: 15px 0 30px 15px;
     }
 
     /*Experiencia Profesional*/
@@ -1191,7 +1196,7 @@ section.footer{
         }
     
     .formcontato__textarea{
-        width: 270px;
+        width: 260px;
         height: 100px;
     }
     .formcontato__input::placeholder, .formcontato__textarea::placeholder{
