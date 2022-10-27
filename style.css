@@ -971,29 +971,6 @@ section.formcontato{
     height: 55px;
     width: 150px;
 }
-
-input.invalid{
-    border-color: #900;
-    background-color: #FDD;
-  }
-  
-  input:valid {
-    border: 0px solid black;
-  }
-  input:invalid:required {
-    border-color: #900;
-    background-color: #FDD;
-  }
-
-  .formcontato__textarea:valid {
-    border: 0px solid black;
-  }
-
-  .formcontato__textarea:invalid:required {
-    border-color: #900;
-    background-color: #FDD;
-  }
-
   
 /***************************************************************/
 /*footeer*/
@@ -1007,7 +984,7 @@ section.footer{
     align-items: center;
     padding: 32px;
     gap: 10px;
-    width: 100%;
+    width: 95%;
     height: 20px;
 
     /* Preto/branco */
