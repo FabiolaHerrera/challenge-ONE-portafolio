@@ -1,5 +1,14 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
 :root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
     --cor-de-fundo: #e9f1f2;
+   /*--cor-de-fundo: #F5F5F5;*/
    --cor-de-link: #000;
    --color-div-alterno : #f2eae9;
 }
@@ -13,7 +22,7 @@ body {
     line-height: 1;
 
     position: absolute;
-    /*width: 1440px;*/
+    width: 1440px;
 
     left: 30px;
     top: 0px;
@@ -28,6 +37,18 @@ a{
     color: var(--cor-de-link);
 }
 
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
 /********************************************/
 /*Sección Menu*/
 /********************************************/
@@ -37,9 +58,8 @@ section.menu{
     justify-content: space-between;
     align-items: center;
     gap: 45px;    
-    width: 97%;
-    padding: 1em 1em 1em 1em;  
- 
+    width: 100%;
+    padding: 0 1em 0 1em;    
     /* Inside auto layout */   
     flex: none;
     order: 0;
@@ -51,6 +71,26 @@ section.menu{
     background: linear-gradient(280deg, rgba(34,193,195,1) 1%, rgba(184,229,230,1) 82%, rgba(233,241,242,1) 94%, rgba(239,243,243,1) 97%, rgba(245,245,245,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#f5f5f5",GradientType=1);
 } 
+.menu__title{
+    width: 195px;
+    height: 19px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    /* Preto/100% */
+
+    color: #464646;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
 
 .menu__header{
 
@@ -60,7 +100,7 @@ section.menu{
     padding: 0px;
     gap: 8px;
 
-    width: 160px;
+    width: 134px;
     height: 24px;
 
     /* Inside auto layout */
@@ -70,20 +110,6 @@ section.menu{
     flex-grow: 0;
 }
 
-.menu__title{
-    width: 160px;
-    height: 19px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    color: #464646;
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
 .menu__list{
     /* Links */
 /* Auto layout */
@@ -102,7 +128,6 @@ order: 1;
 flex-grow: 0
 }
 
-
 /********************************************/
 /*Sección Title*/
 /********************************************/
@@ -111,8 +136,8 @@ section.title {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;    
-    width: 97%;
+    gap: 45px;    
+    width: 100%;
     padding: 0 0 0 64px;
     /* Inside auto layout */   
     flex: none;
@@ -122,7 +147,7 @@ section.title {
 
 .title__profile{
     border-radius: 50%;
-    width: 280px;
+    width: 300px;
     height: 300px;
     
     background: url(.jpg);
@@ -134,10 +159,12 @@ section.title {
 }
 
 .title__bio{    
+    height: 60px;
+
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 48px;
     line-height: 61px;    
 
     /* Preto/100% */
@@ -153,6 +180,8 @@ section.title {
 
 .title__subsection{
     width: 100%;
+    height: 50px;
+
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
@@ -178,6 +207,10 @@ section.title {
     align-items: flex-start;
     padding: 0px;
     gap: 32px;
+
+    width: 467px;
+    height: 24px;
+
     flex: none;
     order: 2;
     flex-grow: 0;
@@ -201,7 +234,9 @@ section.title {
     padding: 0px;
     gap: 24px;
 
-    width: 80%;
+    width: 90%;
+    height: 246px;
+
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -214,18 +249,11 @@ section.title {
     justify-content: space-between;
     align-items: center;
     padding: 0px;
-    padding-left: 0px;
-    gap: 40px;
-    width: 80%;
+    gap: 220px;
+    width: 75%;
     height: 450px;
 
-    /* Inside auto layout */
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
 }
-
 
 /**********************************/
 /*Sección About*/
@@ -236,8 +264,9 @@ section.about{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 0 20px 64px;
+    padding: 0 0 0 64px;
     gap: 10px;
+    height: 350px;
 
     flex: none;
     order: 2;
@@ -246,6 +275,8 @@ section.about{
 }
 
 .about__title {
+    height: 60px;
+
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
@@ -267,9 +298,9 @@ section.about{
 
 
 .about__paragraph{
-    width: 70%;
-    font-size: 18px;
-    line-height: 28px;   
+width: 70%;
+font-size: 18px;
+
 }
 
 .about__container{
@@ -277,6 +308,7 @@ section.about{
     justify-content: space-between;
     align-items: center;
     padding-right: 70px;
+
 }
 
 
@@ -292,11 +324,12 @@ section.about{
 /**************************************************************/
 /*****************skills***************************************(
 /************************************************************/
-section.skills, section.hobbies{     
+section.skills{   
     /* Auto layout */
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: stretch;
 
 
     padding:30px 0 0 0 ;
@@ -306,9 +339,10 @@ section.skills, section.hobbies{
     flex: none;
     order: 3;
     flex-grow: 0;
+    height: 350px;
 }
 
-.skills__title, .hobbies__title{
+.skills__title{
     height: 60px;
     font-family: 'Raleway';
     font-style: normal;
@@ -322,23 +356,23 @@ section.skills, section.hobbies{
     margin-bottom: 0px;
 }
 
-.skills__line, .hobbies__line{
+.skills__line{
     display: flex;
     flex-direction: row;
-    align-content: center;
-    justify-content: center;
+    align-items: center;
     padding: 0 0 30px 64px;
     gap: 16px;
+
+    width: 1200px;
 
     flex: none;
     order: 1;
     align-self: stretch;
     flex-grow: 0;
     flex-wrap: wrap;
-    width: 80%;
 }
 
-.skills__box, .hobbies__box{
+.skills__box{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -346,7 +380,6 @@ section.skills, section.hobbies{
     padding: 10px;
 
     height: 80px;
-    width: 80px;
 
     background: #FFFFFF;
 
@@ -355,12 +388,12 @@ section.skills, section.hobbies{
     flex-grow: 1;
 }
 
-.skills__img, .hobbies__img{
+.skills__img{
     padding-left: 30px;
     padding-bottom: 5px;
 }
 
-.skills__name .hobbies__name{
+.skills__name{
     padding-left: 10px;
     width: 100px;
 }
@@ -368,10 +401,82 @@ section.skills, section.hobbies{
 /******************************************************/
 /*Sección Hobbies*/
 /******************************************************/
-.hobbies_color{
+section.hobbies{
     background-color: var(--color-div-alterno) ;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:30px 0 0 0 ;
+    gap: 32px;
+    /* Inside auto layout */
+
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    height: 350px;
+    justify-content: flex-start;
+}
+    
+.hobbies__title{
+    height: 60px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 61px;    
+    
+    /* Preto/100% */
+    color: #464646;
+    
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
+
+.hobbies__line{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0 30px 64px;
+    gap: 16px;
+
+    width: 1200px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    flex-wrap: wrap;
+}
+
+.hobbies__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+
+    height: 80px;
+
+    background: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.hobbies__img{
+    padding-left: 30px;
+    padding-bottom: 5px;
+}
+
+.hobbies__name{
+    padding-left: 10px;
+    width: 100px;
+}
 
 /********************************************************************/
 /* Experiencia Académica*/
@@ -501,7 +606,6 @@ section.academic{
     order: 0;
     flex-grow: 1;
 }
-
 /***********************************************************************/
 /* experiencia*/
 /***************************************************************************/
@@ -514,9 +618,10 @@ section.experience{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:30px 0 45px 0 ;
+    padding:30px 0 0 0 ;
     gap: 32px;
     /* Inside auto layout */
+    height: 1050px;
 
     flex: none;
     order: 6;
@@ -540,44 +645,60 @@ section.experience{
 
 .experience_list{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 64px;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 64px;
 
-    /* Inside auto layout */
+width: 1136px;
+height: 1816px;
 
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+
 }
 
 .experiencie__box{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 16px;
+    
+/* Experiência */
 
-    /* Inside auto layout */
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 1136px;
+height: 406px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
 }
 
 .experience__img
-{ 
-    border-radius: 5%;
-    width: 600px;
-    height: 430px;
+{/* Rectangle */
 
-    /* Inside auto layout */
+border-radius: 5%;
+width: 600px;
+height: 430px;
 
-    flex: none;
-    align-self: stretch;
-    flex-grow: 0;
-    }
+/* Inside auto layout */
+
+flex: none;
+align-self: stretch;
+flex-grow: 0;
+}
 
 /*order: 0; order: 1;*/
 
@@ -596,119 +717,160 @@ section.experience{
 }
 
 .experience__info{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
+    /* Auto layout */
 
-    width: 368px;
-    /* Inside auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
 
-    flex: none;
-    flex-grow: 1;
+width: 368px;
+height: 112px;
+
+
+/* Inside auto layout */
+
+flex: none;
+flex-grow: 1;
 }
 
-.experience__title{   
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 26px;
-    /* Preto/100% */
+.experience__title{
+    
 
-    color: #464646;
-    /* Inside auto layout */
+height: 26px;
 
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 26px;
+/* identical to box height */
+
+
+/* Preto/100% */
+
+color: #464646;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
 }
 
 .experience__text{
-        /* Challenge Alura Codificador */
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    /* identical to box height */
-    /* Preto/100% */
+    /* Challenge Alura Codificador */
 
-    color: #464646;
-    /* Inside auto layout */
+height: 45px;
 
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+/* Preto/100% */
+
+color: #464646;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
 }
 
 .experience__description{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 16px;
+    
+/* Auto layout */
 
-    width: 560px;
-    height: 51px;
-    /* Inside auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
 
-    flex: none;
-    order: 2;
-    flex-grow: 0;
+width: 560px;
+height: 51px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+
 }
 
 .experience__repo{
     /* Texto */
-    height: 19px;
 
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    /* identical to box height */
-    /* Azul/100% */
 
-    color: #2A7AE4;
-    /* Inside auto layout */
+height: 19px;
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+/* Azul/100% */
+
+color: #2A7AE4;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
 }
 
 .experiencia__botao--repo{
-        /* Botao */
-    box-sizing: border-box;
+    /* Botao */
 
-    /* Auto layout */
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-    gap: 10px;
+box-sizing: border-box;
 
-    width: 116px;
-    height: 51px;
+/* Auto layout */
 
-    /* Azul/100% */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px;
+gap: 10px;
 
-    color: #2A7AE4;
-    border: 1px solid #2A7AE4;
+width: 116px;
+height: 51px;
 
-    /* Inside auto layout */
+/* Azul/100% */
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+color: #2A7AE4;
+border: 1px solid #2A7AE4;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
 }
 
-.experiencia__botao--repo:hover {  
+.experiencia__botao--repo:hover {
+    
     font-size: 16px;
     transition: 1s;
     height: 55px;
@@ -717,47 +879,60 @@ section.experience{
 }
 
 .experience__demo{
-        /* Texto */
-    width: 73px;
-    height: 19px;
+    /* Texto */
 
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    /* identical to box height */
-    /* Preto/branco */
 
-    color: #FFFFFF;
-    /* Inside auto layout */
+width: 73px;
+height: 19px;
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+/* Preto/branco */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
 }
 
 .experience__botao--demo{
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-    gap: 10px;
+    /* Botao */
 
-    width: 105px;
-    height: 51px;
 
-    /* Azul/100% */
+/* Auto layout */
 
-    background: #2A7AE4;
+color: #FFFFFF;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px;
+gap: 10px;
 
-    /* Inside auto layout */
+width: 105px;
+height: 51px;
 
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+/* Azul/100% */
+
+background: #2A7AE4;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+
 }
 
 .experience__botao--demo:hover {
@@ -768,7 +943,6 @@ section.experience{
     height: 55px;
 }
 
-
 /***************************************************************/
 /*Contacto*/
 /****************************************************************/
@@ -778,7 +952,7 @@ section.formcontato{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:30px 0 20px 0 ;
+    padding:30px 0 0 0 ;
     gap: 32px;
     /* Inside auto layout */
 
@@ -797,6 +971,10 @@ section.formcontato{
     padding-left: 10px;
     gap: 16px;
 
+    width: 1136px;
+    height: 660px;
+
+
     /* Inside auto layout */
 
     flex: none;
@@ -809,7 +987,10 @@ section.formcontato{
     border-radius: 20%;
     width: 464px;
     height: 593px;
+
     background: url(.jpg), #EDEDED;
+
+    /* Inside auto layout */
 
     flex: none;
     order: 0;
@@ -838,6 +1019,10 @@ section.formcontato{
     padding: 0px;
     gap: 32px;
 
+    width: 656px;
+    height: 596px;
+
+
     /* Inside auto layout */
 
     flex: none;
@@ -846,7 +1031,9 @@ section.formcontato{
 }
 
 .formcontato__subtext{
-    width: 80%;    
+    width: 656px;
+    height: 38px;
+    
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 500;
@@ -871,6 +1058,10 @@ section.formcontato{
     align-items: flex-start;
     padding: 0px;
     gap: 32px;
+
+    width: 656px;
+    height: 397px;
+
 
     /* Inside auto layout */
 
@@ -994,243 +1185,77 @@ input.invalid{
     background-color: #FDD;
   }
 
-  
 /***************************************************************/
 /*footeer*/
 /***************************************************************/
 
 section.footer{
-        /* Rodapé */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 32px;
-    gap: 10px;
-    width: 100%;
-    height: 20px;
+    /* Rodapé */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 32px;
+gap: 10px;
+width: 100%;
+height: 20px;
 
-    /* Preto/branco */
+/* Preto/branco */
 
-    background: #FFFFFF;
+background: #FFFFFF;
 
-    /* Inside auto layout */
+/* Inside auto layout */
 
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+flex: none;
+order: 1;
+flex-grow: 0;
+   
 }
 
 .footer_ano{
     padding-left: 100px;
 }
 
-/***********************************************************/
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+@media (min-width: 768px) {
+
+/* Menú */
+
+/*title*/
+
+/*Skills*/
+
+/*Hobbies*/
+
+/*Formación Académica*/
+
+/*Experiencia Profesional*/
+
+}
+
 /*Mobile*/
-/***********************************************************/
-@media only screen and (max-width: 425px) {
-    body {    
-        left: 10px;
-        width: 94%;
-    }
-    /*Menu*/
-    section.menu{
-        display: flex;
-        flex-direction: row;
+@media (min-width: 425px) {
 
-        align-items: flex-start;
-        gap: 0px;    
-        width: 97%;
-        padding: 1em 1em 1em 0;    
-    } 
+/*Menu*/
 
-    .menu__title{
-        width: 180px;
-        height: 13px;
-        font-size: 13px;
-        padding: 0px; 
-    }
-    .menu__list{   
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        align-content: center;
-        justify-content: flex-end;
-        padding: 0px;
-        gap: 10px;
-        font-size: 14px;
-        height: 130px;
-    }
+/*Titulo*/
 
-    .menu__header{
-        align-items: flex-start;
-    }
+/*Sección sobre mi*/
 
-    /*Titulo*/
-       section.title {
-        align-items: flex-start;
-        height: 640px;
-        padding: 0;
-    }
+/*Skills*/
 
-    .title__div{
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-    }
+/*Hobbies*/
+ 
+/*Formación Académica*/
 
-    .title__profile{
-        padding-top: 10px;
-        width: 150px;
-        height: 170px;
-        order: 0;
-    }
+/*Experiencia Profesional*/
 
-    .title__bio{    
-        font-weight: 700;
-        font-size: 23px;
-        line-height: 35px;  
-        padding: 0;  
-    }
+ /*Contacto*/
 
-    .title__container{
-        gap: 30px;   
-        width: 100%;
-    }
+/*Footer*/
 
-    .title__subsection{
-        width: 100%;
-        font-size: 20px;
-        line-height: 26px;
-        }
-
-    /*Sección sobre mi*/
-    section.about{
-        padding: 0 0 30px 0;
-    }
-    
-    .about__paragraph{
-        width: 85%;
-        font-size: 18px;
-        line-height: 28px;   
-    }
-
-    .about__title {
-        font-size: 30px;
-        line-height: 61px;  
-      }
-
-      .about__container{
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .sobremi__firma{
-        padding-top: 20px;
-        width: 100px;
-        height: 95px;
-    }    
-    /*Skills*/ /*Hobbies*/
-    section.skills, section.hobbies{   
-        padding: 0 0 30px 0;
-    }
-    
-    .skills__line, .hobbies__line{
-        padding: 0 0 30px 40px;
-    }
-    .skills__title, .hobbies__title{
-        font-size: 30px;
-        line-height: 61px;  
-      }
-     
-    /*Formación Académica*/
-    .academic__title {
-        font-size: 30px;
-        line-height: 61px;  
-      }
-
-      .academic__courses{   
-        padding: 0 0 30px 15px;
-    }
-
-    /*Experiencia Profesional*/
-    section.experience {
-        padding: 0 0 20px 0 ;
-    }
-    .experience__section__title{
-        font-size: 30px;
-        line-height: 61px;  
-    }
-
-    .experiencie__box{
-        flex-direction: column;
-        }
-
-    .experience_list{
-            padding: 0 0 5px 20px;
-    }
-
-    .experience__info{
-        width: 310px;
-    }
-
-    .experience__img {
-        width: 300px;
-        height: 190px;
-    }
-
-    .encriptador_img{
-        order: 0; 
-    }
-    .encriptador_info{
-        order: 1; 
-    }
-
-    .ahorcado_img{
-        order: 0; 
-    }
-    .ahorcado__info{
-        order: 1; 
-    }
-     /*Contacto*/
-     section.formcontato{
-        padding: 0 0 40px 0 ;
-     }
-    .contacto__section__title{
-        font-size: 30px;
-        line-height: 61px;  
-      }
-
-    .formcontato__img{
-        display: none;
-      }
-
-    .formcontato__input{
-        font-size: 18px;
-        padding-left: 10px;
-        width: 250px;
-        height: 40px;
-        }
-    
-    .formcontato__textarea{
-        width: 270px;
-        height: 100px;
-    }
-    .formcontato__input::placeholder, .formcontato__textarea::placeholder{
-        padding-left: 10px;
-    }
-    /*Footer*/
-    
-    section.footer{
-        padding: 20px 0 20px 0 ;
-    }
-
-    .footer_ano{
-        padding-left: 100px;
-    }   
-    .formcontato__subtext{
-        width: 40%;    
-    }
-  }
-
+}
